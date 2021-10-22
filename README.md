@@ -20,7 +20,7 @@
  English: https://www.microsoft.com/en-us/p/u/9NJTGQKM77NQ  <br />
  Język polski: https://www.microsoft.com/pl-pl/p/u/9NJTGQKM77NQ
 
- Privacy policy: https://github.com/pkar70/Waga/wiki/Privacy-policy-(Weiging)
+ Privacy policy: https://github.com/pkar70/Waga/wiki/Privacy-policy-(Weighing)
 
 # WeedQbPlug (WeedQb Socket)
 
