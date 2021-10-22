@@ -1,0 +1,171 @@
+﻿<Page
+    x:Class="MijiaThermo.Alerty"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MijiaThermo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" Unloaded="Page_Unloaded" >
+
+    <UserControl.Resources>
+        <local:KonwersjaVisibilityFromBool x:Key="KonwersjaVisibilityFromBool" />
+    </UserControl.Resources>
+
+
+    <Grid Margin="5,5,5,5">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+    </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="2" FontSize="24" HorizontalAlignment="Center" Text="Alerts"/>
+        <CheckBox Grid.Row="1" Content="Check every" Name="uiAlertsOnOff" x:Uid="uiAlertsOnOff"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" Name="uiAlertsTimer" IsEnabled="{Binding IsChecked,ElementName=uiAlertsOnOff, Converter={StaticResource KonwersjaVisibilityFromBool}}" >
+            <ComboBoxItem Content="15 min" />
+            <ComboBoxItem Content="30 min" />
+            <ComboBoxItem Content="60 min" />
+        </ComboBox>
+
+        <ListView Name="uiItems" Grid.Row="2" Grid.ColumnSpan="2" Margin="5,5,5,5"  HorizontalContentAlignment="Stretch" Visibility="{Binding IsChecked,ElementName=uiAlertsOnOff, Converter={StaticResource KonwersjaVisibilityFromBool}}" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,10,0,0" BorderThickness="2" BorderBrush="Blue" Padding="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock FontSize="18" Text="{Binding sName, Mode=OneTime}" Margin="35,0,0,0"/>
+                        <CheckBox Name="uiAlertInclude" IsChecked="{Binding bAlertInclude, Mode=TwoWay}" MinWidth="30" Width="30"/>
+
+                        <Grid Grid.Row="1" Margin="10,0,0,10" Visibility="{Binding IsChecked, ElementName=uiAlertInclude, Converter={StaticResource KonwersjaVisibilityFromBool}}" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <CheckBox Grid.Row="0" Name="uiAlertIncludeTemp" Content="Temp" x:Uid="uiAlertIncludeTemp" IsChecked="{Binding bAlertIncludeTemp, Mode=TwoWay}" />
+                            <Grid Grid.Row="1" Visibility="{Binding IsChecked, ElementName=uiAlertIncludeTemp, Converter={StaticResource KonwersjaVisibilityFromBool}}" Margin="10,0,5,0" BorderThickness="1" BorderBrush="Blue" Padding="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <CheckBox Grid.Row="0" Name="uiAlertAlarmTLow" Content="Alarm low" x:Uid="uiAlertAlarmLow" IsChecked="{Binding bAlertAlarmTLow, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="0" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertAlarmTLowSlider}"  Visibility="{Binding IsChecked,ElementName=uiAlertAlarmTLow, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="1" HorizontalAlignment="Stretch" Name="uiAlertAlarmTLowSlider" Value="{Binding dAlertAlarmTLow, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertAlarmTLow, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+
+                                <CheckBox Grid.Row="2" Name="uiAlertWarnTLow" Content="Warning low" x:Uid="uiAlertWarnLow" IsChecked="{Binding bAlertWarnTLow, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertWarnTLowSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertWarnTLow, Converter={StaticResource KonwersjaVisibilityFromBool}}"/> 
+                                <Slider Grid.Row="3" HorizontalAlignment="Stretch" Name="uiAlertWarnTLowSlider" Value="{Binding dAlertWarnTLow, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertWarnTLow, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+    
+                                <CheckBox Grid.Row="4" Name="uiAlertWarnTHigh" Content="Warning high" x:Uid="uiAlertWarnHigh" IsChecked="{Binding bAlertWarnTHigh, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertWarnTHighSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertWarnTHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}"/> 
+                                <Slider Grid.Row="5" HorizontalAlignment="Stretch" Name="uiAlertWarnTHighSlider" Value="{Binding dAlertWarnTHigh, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertWarnTHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+
+                                <CheckBox Grid.Row="6" Name="uiAlertAlarmTHigh" Content="Alarm high" x:Uid="uiAlertAlarmHigh" IsChecked="{Binding bAlertAlarmTHigh, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertAlarmTHighSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertAlarmTHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}"/> 
+                                <Slider Grid.Row="7" HorizontalAlignment="Stretch" Name="uiAlertAlarmTHighSlider" Value="{Binding dAlertAlarmTHigh, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertAlarmTHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+
+                            </Grid>
+
+                            <CheckBox Grid.Row="2" Name="uiAlertIncludeHigro" Content="Wilgotność" x:Uid="uiAlertIncludeHigro" IsChecked="{Binding bAlertIncludeHigro, Mode=TwoWay}" />
+                            <Grid Grid.Row="3" Visibility="{Binding IsChecked, ElementName=uiAlertIncludeHigro, Converter={StaticResource KonwersjaVisibilityFromBool}}" Margin="10,0,5,0" BorderThickness="1" BorderBrush="Blue" Padding="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <CheckBox Grid.Row="0" Name="uiAlertAlarmHLow" Content="Alarm low" x:Uid="uiAlertAlarmLow" IsChecked="{Binding bAlertAlarmHLow, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="0" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertAlarmHLowSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertAlarmHLow, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="1" HorizontalAlignment="Stretch" Name="uiAlertAlarmHLowSlider" Value="{Binding dAlertAlarmHLow, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertAlarmHLow, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="99"/>
+
+                                <CheckBox Grid.Row="2" Name="uiAlertWarnHLow" Content="Warning low" x:Uid="uiAlertWarnLow" IsChecked="{Binding bAlertWarnHLow, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertWarnHLowSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertWarnHLow, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="3" HorizontalAlignment="Stretch" Name="uiAlertWarnHLowSlider" Value="{Binding dAlertWarnHLow, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertWarnHLow, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="99"/>
+
+                                <CheckBox Grid.Row="4" Name="uiAlertWarnHHigh" Content="Warning high" x:Uid="uiAlertWarnHigh" IsChecked="{Binding bAlertWarnHHigh, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertWarnHHighSlider}"  Visibility="{Binding IsChecked,ElementName=uiAlertWarnHHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="5" HorizontalAlignment="Stretch" Name="uiAlertWarnHHighSlider" Value="{Binding dAlertWarnHHigh, Mode=TwoWay}" Visibility="{Binding IsChecked,ElementName=uiAlertWarnHHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="99"/>
+
+                                <CheckBox Grid.Row="6" Name="uiAlertAlarmHHigh" Content="Alarm high" x:Uid="uiAlertAlarmHigh" IsChecked="{Binding bAlertAlarmHHigh, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertAlarmHHighSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertAlarmHHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="7" HorizontalAlignment="Stretch" Name="uiAlertAlarmHHighSlider" Value="{Binding dAlertAlarmHHigh, Mode=TwoWay}" Visibility="{Binding IsChecked,ElementName=uiAlertAlarmHHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="99"/>
+
+                            </Grid>
+
+                            <CheckBox Grid.Row="4" Name="uiAlertIncludeTApp" Content="Temp odczuwalna" x:Uid="uiAlertIncludeTApp" IsChecked="{Binding bAlertIncludeTApp, Mode=TwoWay}" />
+                            <Grid Grid.Row="5" Visibility="{Binding IsChecked, ElementName=uiAlertIncludeTApp, Converter={StaticResource KonwersjaVisibilityFromBool}}" Margin="10,0,5,0" BorderThickness="1" BorderBrush="Blue" Padding="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <CheckBox Grid.Row="0" Name="uiAlertAlarmTALow" Content="Alarm low" x:Uid="uiAlertAlarmLow" IsChecked="{Binding bAlertAlarmTALow, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="0" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertAlarmTALowSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertAlarmTALow, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="1" HorizontalAlignment="Stretch" Name="uiAlertAlarmTALowSlider" Value="{Binding dAlertAlarmTALow, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertAlarmTALow, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+
+                                <CheckBox Grid.Row="2" Name="uiAlertWarnTALow" Content="Warning low" x:Uid="uiAlertWarnLow" IsChecked="{Binding bAlertWarnTLow, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertWarnTALowSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertWarnTALow, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="3" HorizontalAlignment="Stretch" Name="uiAlertWarnTALowSlider" Value="{Binding dAlertWarnTALow, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertWarnTALow, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+
+                                <CheckBox Grid.Row="4" Name="uiAlertWarnTAHigh" Content="Warning high" x:Uid="uiAlertWarnHigh" IsChecked="{Binding bAlertWarnTHigh, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertWarnTAHighSlider}"  Visibility="{Binding IsChecked, ElementName=uiAlertWarnTAHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="5" HorizontalAlignment="Stretch" Name="uiAlertWarnTAHighSlider" Value="{Binding dAlertWarnTAHigh, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertWarnTAHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+
+                                <CheckBox Grid.Row="6" Name="uiAlertAlarmTAHigh" Content="Alarm high" x:Uid="uiAlertAlarmHigh" IsChecked="{Binding bAlertAlarmTHigh, Mode=TwoWay}" />
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" Text="{Binding Value, ElementName=uiAlertAlarmTAHighSlider}"  Visibility="{Binding IsChecked,ElementName=uiAlertAlarmTAHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}"/>
+                                <Slider Grid.Row="7" HorizontalAlignment="Stretch" Name="uiAlertAlarmTAHighSlider" Value="{Binding dAlertAlarmTAHigh, Mode=TwoWay}" Visibility="{Binding IsChecked, ElementName=uiAlertAlarmTAHigh, Converter={StaticResource KonwersjaVisibilityFromBool}}" Maximum="50"/>
+
+                            </Grid>
+
+                            <CheckBox Grid.Row="5" Content="Odczytaj zakresy" x:Uid="uiAlertIncludeRange" IsChecked="{Binding bAlertIncludeRange, Mode=TwoWay}" />
+
+                            <ToggleSwitch Grid.Row="6" x:Uid="uiLogRokMiesiac" IsOn="{Binding bYearlyLog, Mode=TwoWay}" OnContent="Log roczny" OffContent="Log miesięczny"/>
+
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" >
+            <AppBarButton Icon="Calculator" Label="Odczuwalna" x:Uid="uiAppTemp" Click="uiAppTemp_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>

@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="WeedQbPlug.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeedQbPlug"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <UserControl.Resources>
+        <local:KonwersjaTla x:Key="KonwersjaTla"/>
+        <local:KonwersjaTla x:Key="KonwersjaVisibilCmdLine"/>
+        <!-- <local:KonwersjaEnabled x:Key="KonwersjaEnabled"/> -->
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="24" HorizontalAlignment="Center" Text="WeedBQ sockets" x:Uid="uiMainPageTitle"/>
+
+        <ListView Name="uiItems" Grid.Row="1" Margin="5,5,5,5"  HorizontalContentAlignment="Stretch" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+                    <Setter Property="MinHeight" Value="30"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,5,0,0" BorderThickness="2" BorderBrush="Blue">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="{Binding sName, Mode=OneTime}" FontSize="20" Margin="5,0,0,0"/>
+                        <ToggleSwitch Grid.Column="1" IsOn="{Binding bIsOn, Mode=TwoWay}" Toggled="uiOnOff_Toggled" Background="{Binding bIsOn, Mode=OneTime,Converter={StaticResource KonwersjaTla}}" MaxWidth="80"/>
+                        <!-- IsEnabled="{Binding sId, Mode=OneTime,Converter={StaticResource KonwersjaEnabled}}"  -->
+                        <Grid.ContextFlyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Rename..." Click="uiRename_Click" x:Uid="uiMainPageFlyoutRename"/>
+                                <MenuFlyoutItem Text="Delete" Click="uiDelete_Click" x:Uid="uiMainPageDelete"/>
+                                <MenuFlyoutItem Text="Copy cmdline" Click="uiCopyCmd_Click" x:Uid="uiMainPageCopyCmd" Visibility="{Binding bIsOn, Mode=OneTime, Converter={StaticResource KonwersjaVisibilCmdLine}}"/>
+                            </MenuFlyout>
+                        </Grid.ContextFlyout>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" >
+            <AppBarButton Icon="BrowsePhotos" Label="Devices" Click="uiGoPair_Click" Name="uiGoPair" x:Uid="uiMainPageCmdDevices"/>
+            <AppBarToggleButton Icon="OneBar" Label="PowerLevel" Click="uiBattAutoOnOff_Click" Name="uiBattAutoOnOff" x:Uid="uiBattAutoOnOff" IsEnabled="False" /> 
+            <AppBarToggleButton Icon="List" Label="Create Log" Name="uiCreateLog" x:Uid="uiMainPageCreateLog"/>
+            <AppBarButton Icon="TwoPage" Label="Explorer" Name="uiRunExplorer" x:Uid="uiMainPageGoExpl" Visibility="Collapsed" />
+            <AppBarButton Icon="Help" Label="Info" Click="uiGoInfo_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>

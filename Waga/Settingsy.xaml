@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Waga.Settingsy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Waga"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition  />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- row0: tytuł-->
+        <TextBlock Text="Waga" HorizontalAlignment="Center" FontSize="24" x:Uid="uiSettTitle" />
+        <!-- row1: wersja -->
+        <StackPanel Grid.Row="2">
+            <ToggleSwitch Name="uiSettSaveRoam" x:Uid="uiSettSaveRoam" Header="Save data as roaming" />
+            <ToggleSwitch Name="uiSettSaveDataLog" x:Uid="uiSettSaveDataLog" Header="Save data to DataLog folder" />
+            <ToggleSwitch Name="uiSettSaveImportDataLog" x:Uid="uiSettSaveImportDataLog" Header="Save imported data to DataLog folder" />
+            <ToggleSwitch Name="uiSettSaveDetailedDataLog" x:Uid="uiSettSaveDetailedDataLog" Header="Also save separate file for each measurement" />
+        </StackPanel>
+
+        <Button x:Uid="uiSettSave" Content="Save!" HorizontalAlignment="Center" Grid.Row="3" Click="uiSettSave_Click" Margin="0,5,0,10"/>
+    </Grid>
+</Page>

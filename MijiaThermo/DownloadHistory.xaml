@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="MijiaThermo.DownloadHistory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MijiaThermo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <UserControl.Resources>
+        <local:KonwersjaRangeData x:Key="KonwersjaRangeData" />
+    </UserControl.Resources>
+
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="uiTitle" FontSize="20" HorizontalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Center" Text="History of hourly range" Grid.Row="1" x:Uid="uiHistoryTitle"/>
+        
+        <ListView Name="uiItems" Grid.Row="2" Margin="5,5,5,5"  HorizontalContentAlignment="Stretch" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+                    <Setter Property="MinHeight" Value="20"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,5,0,0" BorderThickness="2" BorderBrush="Blue">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="{Binding dDate, Mode=OneTime, Converter={StaticResource KonwersjaRangeData}}" />
+                        <TextBlock Grid.Column="1" Text="{Binding sRangeT, Mode=OneTime}"  />
+                        <TextBlock Grid.Column="2" Text="{Binding sRangeH, Mode=OneTime}"  />
+                        </Grid>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Compact" >
+            <AppBarButton Icon="Mail" Label="Mail" Click="uiSendEmail_Click" Name="uiSendEmail" IsEnabled="False" />
+            <AppBarButton Icon="Copy" Label="Clipboard" Click="uiSendClip_Click" Name="uiSendClip" IsEnabled="False" />
+            <AppBarButton Icon="Clear" Label="Clear" Click="uiClearLog_Click" Name="uiHistoryClear" IsEnabled="False" x:Uid="uiHistoryClear"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>

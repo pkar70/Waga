@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="MijiaThermo.HelpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MijiaThermo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Grid>
+        <ScrollViewer>
+        <StackPanel Margin="7,5,7,5">
+            <TextBlock Text="MijiaThermo" FontSize="24" HorizontalAlignment="Center" />
+            <TextBlock Name="uiVers" FontSize="10" HorizontalAlignment="Center" Margin="0,2,0,10" />
+
+            <TextBlock x:Uid="uiHelpString1" TextWrapping="Wrap" Text="This app can control Mijia Thermo/Higro meters, square version. Such devices are visible on Bluetooth network as LYWSD03MMC. There is Android app for this, but why use Android when you can use Windows? :) And this app has some features not present in official Android app (but, of course, also lacks some of functionalities)." />
+            <TextBlock x:Uid="uiHelpString1a" TextWrapping="Wrap" Margin="0,4,0,4" Text="App doesn't use Internet - it doesn't send your data, it doesn't require you to create any account, etc. Your privacy is valuable, and I don't want to compromize it." />
+            <TextBlock x:Uid="uiHelpString2" TextWrapping="Wrap" Text="Your first step should be scanning Bluetooth devices. If you have more than one device, please switch them on one by one - switch device on, run scanning within app, rename device found. This is simple way to know which device is which."  />
+            <TextBlock x:Uid="uiHelpString3" TextWrapping="Wrap" Margin="0,4,0,4" Text="Then, set clock on every device; probably you would also want to set happy face ranges." />
+            <TextBlock x:Uid="uiHelpString4" TextWrapping="Wrap" Text="Main functionality of this app is download data from app, and export it. Every measurement, and every hourly statistic downloaded from device, is saved in text file. On desktop, you can access this files clicking on Explorer button on MainPage. On phones, these files are created on your SD card, in folder Datalogs\MijiaThermo, subfolders for year and month." />
+            <TextBlock x:Uid="uiHelpString4a" TextWrapping="Wrap" Text="A także toasty. Jako bonus jest kalkulator temperatury odczuwalnej." />
+            <TextBlock x:Uid="uiHelpString5" TextWrapping="Wrap" Margin="0,4,0,4" Text="Log withing device is long, it contains data for several days; so you can download it only from time to time." />
+            <TextBlock x:Uid="uiHelpString6" TextWrapping="Wrap" Text="If you want charts, please export data to e.g. Excel - use History page, read data, copy to clipboard; then in Excel - paste into worksheet. Or use log files, created by app." />
+            <TextBlock x:Uid="uiHelpString7" Margin="0,10,0,0" TextWrapping="Wrap" Text="This app greatly utilizes information from https://github.com/JsBergbau/MiTemperature2 ." />
+
+
+        </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

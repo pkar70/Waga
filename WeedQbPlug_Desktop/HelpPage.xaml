@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="WeedQbPlug.HelpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeedQbPlug"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="7,5,7,5">
+                <TextBlock Text="Info" FontSize="24" HorizontalAlignment="Center" />
+                <TextBlock Name="uiVers" FontSize="10" HorizontalAlignment="Center" Margin="0,2,0,10" />
+
+                <TextBlock x:Uid="uiHelpString1" TextWrapping="Wrap" Text="This app can control Bluetooth smart sockets named WEEDQB, visible on Bluetooth network as BT18. There is Android app for this, but why use Android when you can use Windows? :) And this app has some features not present in official Android app (but, of course, also lacks some of functionalities)." />
+                <TextBlock x:Uid="uiHelpString2" TextWrapping="Wrap" Margin="0,4,0,4" Text="App doesn't use Internet - it doesn't send your data anywhere. Similar to original app, WEEDQB Button, it doesn't require you to create any account, etc." />
+                <TextBlock x:Uid="uiHelpString3" TextWrapping="Wrap" Text="Your first step should be creating list of devices. It can be done in two different ways: by pairing device in Windows settings (PIN 1234) and running app; or by scanning Bluetooth network from app." />
+                <TextBlock x:Uid="uiHelpString4" TextWrapping="Wrap" Margin="0,4,0,4" Text="If you have more than one device, please add them on one by one - switch device on, add it (as described above), rename device found. This is simple way to know which device is which."  />
+                <TextBlock x:Uid="uiHelpString5" TextWrapping="Wrap" Text="By nature of these sockets, app cannot read current status of device." />
+                <TextBlock x:Uid="uiHelpString6" TextWrapping="Wrap" Margin="0,4,0,4" Text="App can create log of commands sent to socket (i.e. switching on or off). On desktop, you can access this files clicking on Explorer button on MainPage. On phones, these files are created on your SD card, in folder Datalogs\WeedQbPlug, subfolders for year and month." />
+                <TextBlock x:Uid="uiHelpString7" TextWrapping="Wrap" Text="If your Windows device has batteries (e.g., it is phone), app can automatically switch on power socket when battery level drops below 30 %, and switch off when it reaches 95 %. Battery level test is done every 30 minutes." />
+                <TextBlock x:Uid="uiHelpString8" TextWrapping="Wrap" Margin="0,10,0,4" Text="Przeróbka na CEE" />
+
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>

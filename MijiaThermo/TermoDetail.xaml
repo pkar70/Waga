@@ -1,0 +1,107 @@
+﻿<Page
+    x:Class="MijiaThermo.TermoDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MijiaThermo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="uiTitle" FontSize="20" HorizontalAlignment="Center" />
+        <ScrollViewer Grid.Row="1">
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" /> <!--' mac (box) -->
+                        <RowDefinition Height="Auto" /> <!--' added-->
+                    <RowDefinition Height="Auto" /> <!--' deltaT-->
+                    <RowDefinition Height="Auto" /> <!--' deltaH-->
+                    <RowDefinition Height="Auto" /> <!--' lastpomiar-->
+                    <RowDefinition Height="Auto" /> <!--' lasttemp-->
+                        <RowDefinition Height="Auto" /> <!--' lasthigro-->
+                        <RowDefinition Height="Auto" /> <!--' lastbattery-->
+                        <RowDefinition Height="Auto" /> <!--' units, button:switch-->
+                        <RowDefinition Height="Auto" /> <!--' devicetime, button: set-->
+                        <RowDefinition Height="Auto" /> <!--' to we frame? i jeden button?-->
+                        <RowDefinition Height="Auto" /> <!--' maxtemp, buttonset-->
+                        <RowDefinition Height="Auto" /> <!--' mintemp, buttonset-->
+                        <RowDefinition Height="Auto" /> <!--' maxhigro, buttonset-->
+                        <RowDefinition Height="Auto" /> <!--' minhigro, buttonset-->
+                    <RowDefinition Height="Auto" /> <!--' to we frame? i jeden button?-->
+                    <RowDefinition Height="Auto" /> <!--' maxtemp / min-->
+                    <RowDefinition Height="Auto" /> <!--' maxhigro / min-->
+                    <RowDefinition Height="Auto" /> <!--' comm interval-->
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="MAC address" Grid.Row="0" Grid.Column="0" x:Uid="resUiMacAddr" />
+                <TextBox x:Name="uiMac" Grid.Row="0" Grid.Column="1" IsReadOnly="true" />
+
+                <TextBlock Text="Added at" Grid.Row="1" Grid.Column="0" x:Uid="resUiAddedAt"/>
+                <TextBlock x:Name="uiAdded" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" />
+
+                <TextBlock Text="Δ temperature" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" x:Uid="resUiDeltaTemp"/>
+                <TextBox x:Name="uiDeltaTemp" Grid.Row="2" Grid.Column="1" />
+                <Button Content="Set!" x:Uid="resUiDeltaTempButton" Grid.Row="2" Grid.Column="2" Click="uiDeltaT_Click" Margin="10,0,0,0" HorizontalAlignment="Center" />
+
+                <TextBlock Text="Δ humidity" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" x:Uid="uiDeltaHigt" />
+                <TextBox x:Name="uiDeltaHigro" Grid.Row="3" Grid.Column="1" />
+                <Button Content="Set!" Grid.Row="3" Grid.Column="2" Click="uiDeltaH_Click" Margin="10,2,0,0" HorizontalAlignment="Center" x:Uid="resUiDeltaHigrButton"/>
+
+
+                <TextBlock Text="Current (uncorrected) data" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Name="uiLastWhen" DoubleTapped="uiTryGetTemp_Tapped" x:Uid="resUiCurrData" />
+
+                <TextBlock Text="Last temperature" Grid.Row="5" Grid.Column="0" x:Uid="resUiCurrDataT"/>
+                <TextBlock x:Name="uiLastTemp" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" />
+
+                <TextBlock Text="... humidity" Grid.Row="6" Grid.Column="0" x:Uid="resUiCurrDataH"/>
+                <TextBlock x:Name="uiLastHigro" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" />
+
+                <TextBlock Text="... battery" Grid.Row="7" Grid.Column="0" x:Uid="resUiCurrDataB"/>
+                <TextBlock x:Name="uiLastBatt" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" />
+
+                <TextBlock Text="Units" Grid.Row="8" Grid.Column="0" DoubleTapped="uiUnits_DoubleTapped" VerticalAlignment="Center" x:Uid="resUiUnitsHdr"/>
+                <TextBlock x:Name="uiUnits" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button x:Name="uiUnitsButton" Content="Switch" Grid.Row="8" Grid.Column="2" IsEnabled="false" Margin="10,0,0,0" HorizontalAlignment="Center" x:Uid="uiUnitsButton"/>
+
+                <TextBlock Text="Device time" Grid.Row="9" Grid.Column="0" DoubleTapped="uiDevTime_DoubleTapped" VerticalAlignment="Center" x:Uid="resUiDevTime"/>
+                <TextBlock x:Name="uiDevTime" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" />
+                <Button Content="Set!" Grid.Row="9" Grid.Column="2" IsEnabled="false" x:Name="uiTimeButton"  Margin="10,2,0,2" HorizontalAlignment="Center" x:Uid="uiTimeButton" />
+
+                <TextBlock Text="Happy face" Grid.Row="10" Grid.Column="0" DoubleTapped="uiDevHappyFace_DoubleTapped" VerticalAlignment="Center" x:Uid="uiHappyFaceHdr"/>
+                <Button Content="Set!" Grid.Row="10" Grid.Column="2" IsEnabled="false" x:Name="uiHappyFaceButton"  Margin="10,0,0,0" HorizontalAlignment="Center" x:Uid="uiHappyFaceButton"/>
+
+                <TextBlock Text="... min temperat" Grid.Row="11" Grid.Column="0" DoubleTapped="uiDevHappyFace_DoubleTapped" x:Uid="resUiMinTemp"/>
+                <TextBox Grid.Row="11" Grid.Column="1" Name="uiHappyMinT" HorizontalAlignment="Center"  />
+                <TextBlock Text="... max temperat" Grid.Row="12" Grid.Column="0" DoubleTapped="uiDevHappyFace_DoubleTapped" x:Uid="resUiMaxTemp"/>
+                <TextBox Grid.Row="12" Grid.Column="1" Name="uiHappyMaxT"  HorizontalAlignment="Center" />
+                <TextBlock Text="... min humidity" Grid.Row="13" Grid.Column="0" DoubleTapped="uiDevHappyFace_DoubleTapped" x:Uid="resUiMinHigro"/>
+                <TextBox Grid.Row="13" Grid.Column="1" Name="uiHappyMinH"  HorizontalAlignment="Center" />
+                <TextBlock Text="... max humidity" Grid.Row="14" Grid.Column="0" DoubleTapped="uiDevHappyFace_DoubleTapped" x:Uid="resUiMaxHigro"/>
+                <TextBox Grid.Row="14" Grid.Column="1" Name="uiHappyMaxH"  HorizontalAlignment="Center" />
+
+                <TextBlock Text="Hourly range" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="3" Name="uiDevRecords"  DoubleTapped="uiDevRecords_DoubleTapped" x:Uid="resUiHourlyHdr"/>
+
+                <TextBlock Text="... temperat" Grid.Row="16" Grid.Column="0" x:Uid="resUiHourlyT"/>
+                <TextBlock x:Name="uiRangeTemp" Grid.Row="16" Grid.Column="1" HorizontalAlignment="Center" />
+
+                <TextBlock Text="... humidity" Grid.Row="17" Grid.Column="0" x:Uid="resUiHourlyH" />
+                <TextBlock x:Name="uiRangeHigro" Grid.Row="17" Grid.Column="1" HorizontalAlignment="Center"/>
+
+<!--                <TextBlock Text="Comm interval (ms)" Grid.Row="18" Grid.Column="0" />
+                <TextBlock x:Name="uiCommInt" Grid.Row="18" Grid.Column="1" />
+                <Button Content="Change" Grid.Row="18" Grid.Column="2" IsEnabled="false" /> -->
+            </Grid>
+        </ScrollViewer>
+        
+    </Grid>
+</Page>

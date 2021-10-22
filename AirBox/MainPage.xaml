@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="AirBox.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AirBox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <UserControl.Resources>
+        <local:KonwersjaTemp x:Key="KonwersjaTemp"/>
+        <local:KonwersjaVisibility x:Key="KonwersjaVisib" />
+        <local:KonwersjaPpm x:Key="KonwersjaPpm"/>
+        <local:KonwersjaMg x:Key="KonwersjaMg"/>
+        <local:KonwersjaDaty x:Key="KonwersjaDaty"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <!-- na uiVers -->
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="24" HorizontalAlignment="Center" Text="AirBoxy" x:Uid="resUiMainPageTitle"/>
+
+        <ListView Name="uiItems" Grid.Row="2" Margin="5,5,5,5"  HorizontalContentAlignment="Stretch" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+                    <Setter Property="MinHeight" Value="30"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,5,0,0" BorderThickness="2" BorderBrush="Blue" DoubleTapped="uiDevice_DoubleTapped">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.RowSpan="2" Grid.Column="0" MinWidth="30" Visibility="{Binding dLastTemp, Mode=OneTime, Converter={StaticResource KonwersjaVisib}}" IsChecked="{Binding bEnabled, Mode=TwoWay}" />
+
+                        <TextBlock Grid.Column="1" Text="{Binding sName, Mode=OneTime}" FontSize="20" Margin="5,0,0,0"/>
+                        <TextBlock Grid.Column="2" Text="{Binding dLastTimeStamp, Mode=OneTime, Converter={StaticResource KonwersjaDaty}}" FontSize="10" Margin="5,0,0,0"/>
+
+                        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="{Binding dLastTemp, Mode=OneWay, Converter={StaticResource KonwersjaTemp} }" Margin="10,0,0,5" x:Uid="uiMainPageHourlyT"/>
+                            <TextBlock Grid.Column="1" Text="{Binding dLastCO2, Mode=OneWay, Converter={StaticResource KonwersjaPpm} }" Margin="5,0,0,0"  />
+                            <TextBlock Grid.Column="2" Text="{Binding dLastHCHO, Mode=OneWay, Converter={StaticResource KonwersjaMg} }" Margin="10,0,0,5" x:Uid="uiMainPageHourlyH"/>
+                            <TextBlock Grid.Column="3" Text="{Binding dLastTVOC, Mode=OneWay, Converter={StaticResource KonwersjaMg} }" Margin="5,0,0,0"  />
+
+                        </Grid>
+
+                        <Grid.ContextFlyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Rename..." Click="uiRename_Click" x:Uid="uiMainPageFlyoutRename"/>
+                                <MenuFlyoutItem Text="Settings..." Click="uiGoDetails_Click" x:Uid="uiMainPageFlyoutDetails"/>
+                                <MenuFlyoutItem Text="Try read" Click="uiTryRead_Click" />
+                                <MenuFlyoutItem Text="Explain" Click="uiExplain_Click" />
+                                <!-- <MenuFlyoutItem Text="LiveTile" Click="uiMakeTile_Click" x:Uid="uiMainPageFlyoutDetails" /> -->
+                            </MenuFlyout>
+                        </Grid.ContextFlyout>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" >
+            <!-- <AppBarToggleButton Icon="Clock" Name="uiOnOff" Label="Background" Click="uiOnOff_Click"/> -->
+            <AppBarButton Icon="Refresh" Label="Rescan" Click="uiRescan_Click" Visibility="Collapsed" Name="uiRescan"/>
+            <AppBarToggleButton Icon="BrowsePhotos" Label="Devices" Click="uiGoPair_Click" Name="uiGoPair" x:Uid="uiMainPageCmdDevices"/>
+            <AppBarButton Icon="TwoPage" Label="Explorer" Click="uiRunExplorer_Click" Visibility="Collapsed" Name="uiRunExplorer" x:Uid="uiMainPageCmdExplorer"/>
+            <AppBarToggleButton Icon="Clock" Label="Background" Click="uiOnOff_Click" Name="uiOnOff" x:Uid="uiOnOff"/>
+            <AppBarButton Icon="Help" Label="Info" Click="uiGoInfo_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

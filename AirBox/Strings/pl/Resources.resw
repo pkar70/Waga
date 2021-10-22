@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msgEnterNewName" xml:space="preserve">
+    <value>Wprowadź nową nazwę</value>
+  </data>
+  <data name="msgOnlyNumbersHere" xml:space="preserve">
+    <value>Proszę podać liczbę!</value>
+  </data>
+  <data name="msgReadAllFromDevice" xml:space="preserve">
+    <value>Wczytać wszystko? To zajmie chwilę...</value>
+  </data>
+  <data name="msgRename" xml:space="preserve">
+    <value>Zmień!</value>
+  </data>
+  <data name="resDlgCancel" xml:space="preserve">
+    <value>Zrezygnuj</value>
+  </data>
+  <data name="resDlgNo" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="resDlgYes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="resUiAddedAt.Text" xml:space="preserve">
+    <value>Dodany dnia</value>
+  </data>
+  <data name="resUiDeltaTemp.Text" xml:space="preserve">
+    <value>Δ temperatury</value>
+  </data>
+  <data name="resUiDeltaTempButton.Content" xml:space="preserve">
+    <value>Ustaw!</value>
+  </data>
+  <data name="resUiMacAddr.Text" xml:space="preserve">
+    <value>Adres MAC</value>
+  </data>
+  <data name="_lang" xml:space="preserve">
+    <value>PL</value>
+  </data>
+  <data name="msgCannotGetGATTvalue" xml:space="preserve">
+    <value>Nie mogę odczytać danych z GATT</value>
+  </data>
+  <data name="msgHistoryLogClip" xml:space="preserve">
+    <value>Log jest już w ClipBoard</value>
+  </data>
+  <data name="msgHistoryMailBodyHdr" xml:space="preserve">
+    <value>Log ściągnięty z urządzenia </value>
+  </data>
+  <data name="msgHistoryStatDaty" xml:space="preserve">
+    <value>Pomiędzy</value>
+  </data>
+  <data name="msgHistoryStatMaxH" xml:space="preserve">
+    <value>Maksymalna wilgotność:</value>
+  </data>
+  <data name="msgHistoryStatMaxT" xml:space="preserve">
+    <value>Maksymalna temperatura:</value>
+  </data>
+  <data name="msgHistoryStatMinH" xml:space="preserve">
+    <value>Minimalna wilgotność:</value>
+  </data>
+  <data name="msgHistoryStatMinT" xml:space="preserve">
+    <value>Minimalna temperatura:</value>
+  </data>
+  <data name="msgHistorySureClear" xml:space="preserve">
+    <value>Na pewno skasować log w urządzeniu?</value>
+  </data>
+  <data name="msgHistoryWantRead" xml:space="preserve">
+    <value>Ściągnąć log (historię) z urządzenia?</value>
+  </data>
+  <data name="msgHmaxDeltaHmin" xml:space="preserve">
+    <value>za mała różnica między Hmax i Hmin</value>
+  </data>
+  <data name="msgHmaxGreaterHmin" xml:space="preserve">
+    <value>Hmax musi być większe niż Hmin</value>
+  </data>
+  <data name="msgNoDataFromDevice" xml:space="preserve">
+    <value>Urządzenie nie zwróciło danych</value>
+  </data>
+  <data name="msgNoDeviceTryRescan" xml:space="preserve">
+    <value>Nie mogę dostać się do urządzenia, spróbuj ponownie zeskanować sieć</value>
+  </data>
+  <data name="msgOnlyNumberFor" xml:space="preserve">
+    <value>Proszę wpisać liczbę w pole</value>
+  </data>
+  <data name="msgScanBTnet" xml:space="preserve">
+    <value>Skanować sieć Bluetooth?</value>
+  </data>
+  <data name="msgSetClock" xml:space="preserve">
+    <value>Ustawić zegar urządzenia?</value>
+  </data>
+  <data name="msgSwitchUnit" xml:space="preserve">
+    <value>Zmienić jednostki?</value>
+  </data>
+  <data name="msgTmaxDeltaTmin" xml:space="preserve">
+    <value>za mała różnica między Tmax i Tmin</value>
+  </data>
+  <data name="msgTmaxGreaterTmin" xml:space="preserve">
+    <value>Tmax musi być większe niż Tmin</value>
+  </data>
+  <data name="msgToastBatt" xml:space="preserve">
+    <value>Słaba bateria</value>
+  </data>
+  <data name="msgToastHigro" xml:space="preserve">
+    <value>Wilgotność</value>
+  </data>
+  <data name="msgToastTemp" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="msgToastTooHigh" xml:space="preserve">
+    <value>za wysoka</value>
+  </data>
+  <data name="msgToastTooLow" xml:space="preserve">
+    <value>za niska</value>
+  </data>
+  <data name="msgValueTooLow" xml:space="preserve">
+    <value>za mała</value>
+  </data>
+  <data name="msgWarnNoBT" xml:space="preserve">
+    <value>Brak dostępu do Bluetooth</value>
+  </data>
+  <data name="resMsgDeltaTooBig" xml:space="preserve">
+    <value>Za duża poprawka...</value>
+  </data>
+  <data name="resUiCurrData.Text" xml:space="preserve">
+    <value>Aktualne dane (bez poprawki)</value>
+  </data>
+  <data name="resUiCurrDataB.Text" xml:space="preserve">
+    <value>... bateria</value>
+  </data>
+  <data name="resUiCurrDataH.Text" xml:space="preserve">
+    <value>... wilgotność</value>
+  </data>
+  <data name="resUiCurrDataT.Text" xml:space="preserve">
+    <value>Ostatnia temperatura</value>
+  </data>
+  <data name="resUiDeltaHigrButton.Content" xml:space="preserve">
+    <value>Ustaw1</value>
+  </data>
+  <data name="resUiDevTime.Text" xml:space="preserve">
+    <value>Czas urządzenia</value>
+  </data>
+  <data name="resUiHourlyH.Text" xml:space="preserve">
+    <value>... wilgotność</value>
+  </data>
+  <data name="resUiHourlyHdr.Text" xml:space="preserve">
+    <value>Zakres godzinny</value>
+  </data>
+  <data name="resUiHourlyT.Text" xml:space="preserve">
+    <value>... temperat</value>
+  </data>
+  <data name="resUiMainPageTitle.Text" xml:space="preserve">
+    <value>Jakość powietrza</value>
+  </data>
+  <data name="resUiMaxHigro.Text" xml:space="preserve">
+    <value>... max wilgotność</value>
+  </data>
+  <data name="resUiMaxTemp.Text" xml:space="preserve">
+    <value>... max temperat</value>
+  </data>
+  <data name="resUiMinHigro.Text" xml:space="preserve">
+    <value>... min wilgotność</value>
+  </data>
+  <data name="resUiMinTemp.Text" xml:space="preserve">
+    <value>... min temperat</value>
+  </data>
+  <data name="resUiUnitsHdr.Text" xml:space="preserve">
+    <value>Jednostki</value>
+  </data>
+  <data name="uiDeltaHigt.Text" xml:space="preserve">
+    <value>Δ wilgotności</value>
+  </data>
+  <data name="uiHappyFaceButton.Content" xml:space="preserve">
+    <value>Ustaw!</value>
+  </data>
+  <data name="uiHappyFaceHdr.Text" xml:space="preserve">
+    <value>Happy face</value>
+  </data>
+  <data name="uiHelpString1.Text" xml:space="preserve">
+    <value>  Aplikacja służy do zarządzania czujnikami jakości powietrza, które są widoczne w sieci Bluetooth z nazwą zaczynającą się od 6003#. Firma udostępnia aplikację na Android, ale po co używać Android jak można użyć Windows? :) Niektóre funkcjonalności aplikacji firmowej są niezaimplentowane, ale za to są dodane inne możliwości (których nie ma w aplikacji firmowej). </value>
+  </data>
+  <data name="uiHelpString2.Text" xml:space="preserve">
+    <value>Aplikacja nie korzysta z Internet, żadnych danych nigdzie nie wysyła, nie wymaga zakładania nigdzie żadnego konta, itp. Prywatność jest bardzo ważna.</value>
+  </data>
+  <data name="uiHelpString3.Text" xml:space="preserve">
+    <value>Pierwszym krokiem powinno być przeskanowanie sieci Bluetooth. Jeśli masz więcej niż jeden czujnik, włączaj je po kolei - tzn. włącz urządzenie, przeskanuj sieć, ustaw nazwę urządzenia, i dopiero wtedy włączaj kolejne urządzenie. W ten sposób najprościej sie dowiesz które urządzenie jest którym.</value>
+  </data>
+  <data name="uiHelpString4.Text" xml:space="preserve">
+    <value>  Główną funkcjonalnością aplikacji jest wydobywanie danych z urządzenia i udostępnianie ich do dalszej obróbki. Każdy pomiar zapisywany jest w pliku. Do plików możesz się dostać na komputerze, korzystając z guzika "Eksplorator" na głównej stronie aplikacji; gdy zaś aplikacja działa na telefonie, zapisuje pliki na karcie SD, w katalogu "Datalogs\AirBox", w podkatalogu roku i miesiąca.</value>
+  </data>
+  <data name="uiHelpString5.Text" xml:space="preserve">
+    <value>Aplikacja może pracować w tle, ściągając co 30 minut dane z czujników. Tak ściągnięte dane porównywane są z podanymi progami ostrzeżeń i alarmów, po przekroczeniu których wysyłane jest powiadomienie (toast). Ponieważ dane są pamiętane w formie Roaming, aplikacja zainstalowana na jednym urządzeniu (np. na komputerze) może ściągać dane z czujników, a aplikacja zainstalowana w telefonie (albo na laptopie) potrafi je pokazać.</value>
+  </data>
+  <data name="uiHelpString6.Text" xml:space="preserve">
+    <value>  Jeśli chcesz zrobić sobie wykresy, prześlij dane np. doExcel - albo otwierając bezpośrednio plik z danymi, albo wchodząc na stronę Szczegóły dla danego termometru, i po ściągnięciu danych z urządzenia - dane te eksportuj do ClipBoard (schowka), i wklej do arkusza.</value>
+  </data>
+  <data name="uiHelpString7.Text" xml:space="preserve">
+    <value>  Nieocenioną pomocą przy tworzeniu aplikacji była strona https://www.zukeran.org/shin/d/2020/12/19/co2-sensor-2/ .</value>
+  </data>
+  <data name="uiHistoryClear.Content" xml:space="preserve">
+    <value>Wyczyść</value>
+  </data>
+  <data name="uiHistoryTitle.Text" xml:space="preserve">
+    <value>Historia zakresów godzinnych</value>
+  </data>
+  <data name="uiMainPageCmdDevices.Label" xml:space="preserve">
+    <value>Urządzenia</value>
+  </data>
+  <data name="uiMainPageCmdExplorer.Label" xml:space="preserve">
+    <value>Eksplorator</value>
+  </data>
+  <data name="uiMainPageFlyoutDetails.Text" xml:space="preserve">
+    <value>Szczegóły...</value>
+  </data>
+  <data name="uiMainPageFlyoutHistory.Text" xml:space="preserve">
+    <value>Historia...</value>
+  </data>
+  <data name="uiMainPageFlyoutRename.Text" xml:space="preserve">
+    <value>Zmień nazwę</value>
+  </data>
+  <data name="uiMainPageHourlyH.Text" xml:space="preserve">
+    <value>Godzinna wilgotność</value>
+  </data>
+  <data name="uiMainPageHourlyT.Text" xml:space="preserve">
+    <value>Godzinna temp</value>
+  </data>
+  <data name="uiTimeButton.Content" xml:space="preserve">
+    <value>Ustaw!</value>
+  </data>
+  <data name="uiUnitsButton.Content" xml:space="preserve">
+    <value>Przełącz!</value>
+  </data>
+  <data name="msgEnterNewName1" xml:space="preserve">
+    <value>Wprowadź nową nazwę, ale bez używania \ : / </value>
+  </data>
+  <data name="resDlgContinue" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="uiOnOff.Label" xml:space="preserve">
+    <value>Praca w tle</value>
+  </data>
+  <data name="msgCannotReach" xml:space="preserve">
+    <value>jest niedostępny</value>
+  </data>
+  <data name="msgExplainCO2highRisk" xml:space="preserve">
+    <value>(wysokie ryzyko dla zdrowia)</value>
+  </data>
+  <data name="msgExplainCO2indoor" xml:space="preserve">
+    <value>(jak wewnątrz pomieszczeń)</value>
+  </data>
+  <data name="msgExplainCO2outside" xml:space="preserve">
+    <value>(jak na polu)</value>
+  </data>
+  <data name="msgExplainCO2poorair" xml:space="preserve">
+    <value>(źle, wywietrz)</value>
+  </data>
+  <data name="msgExplainCO2risk" xml:space="preserve">
+    <value>(ryzyko dla zdrowia)</value>
+  </data>
+  <data name="msgExplainCO2VeryLow" xml:space="preserve">
+    <value>(podejrzanie niskie)</value>
+  </data>
+  <data name="msgExplainHCHOallergic" xml:space="preserve">
+    <value>(podrażnienia u osób wrażliwych)</value>
+  </data>
+  <data name="msgExplainHCHOcancer" xml:space="preserve">
+    <value>(ryzyko nowotworów górnych dróg oddechowych)</value>
+  </data>
+  <data name="msgExplainHCHOdamage" xml:space="preserve">
+    <value>(problemy z oddychaniem)</value>
+  </data>
+  <data name="msgExplainHCHOgreat" xml:space="preserve">
+    <value>(super)</value>
+  </data>
+  <data name="msgExplainHCHOirritation" xml:space="preserve">
+    <value>(podrażnienie oczu i błon śluzowych)</value>
+  </data>
+  <data name="msgExplainTemperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="msgExplainTemperatureTooHigh" xml:space="preserve">
+    <value>(zbyt wysoka, dane mogą być niepoprawne)</value>
+  </data>
+  <data name="msgExplainTemperatureTooLow" xml:space="preserve">
+    <value>(zbyt niska, dane mogą być niepoprawne)</value>
+  </data>
+  <data name="msgExplainTVOCacceptable" xml:space="preserve">
+    <value>(akceptowalny)</value>
+  </data>
+  <data name="msgExplainTVOChigh" xml:space="preserve">
+    <value>(wysokie - opuść pomieszczenie)</value>
+  </data>
+  <data name="msgExplainTVOCwarning" xml:space="preserve">
+    <value>(poziom ostrzegawczy)</value>
+  </data>
+  <data name="msgWarmingUp" xml:space="preserve">
+    <value>sensor się inicjalizuje</value>
+  </data>
+</root>

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msgEnterNewName" xml:space="preserve">
+    <value>Wpisz nową nazwę gniazdka</value>
+  </data>
+  <data name="msgFoundNew" xml:space="preserve">
+    <value>Nowe gniazdko sparowane</value>
+  </data>
+  <data name="msgNoQRCode" xml:space="preserve">
+    <value>To nie jest QRcode</value>
+  </data>
+  <data name="msgRename" xml:space="preserve">
+    <value>Przemianuj</value>
+  </data>
+  <data name="msgScanBTnet" xml:space="preserve">
+    <value>Skanować sieć Bluetooth?</value>
+  </data>
+  <data name="msgWantAccuTimer" xml:space="preserve">
+    <value>Włączyć sterowanie gniazdkiem zgodnie z poziomem naładowania?</value>
+  </data>
+  <data name="msgWantImport" xml:space="preserve">
+    <value>Wczytać sparowane gniazdka?</value>
+  </data>
+  <data name="resDlgCancel" xml:space="preserve">
+    <value>Pomiń</value>
+  </data>
+  <data name="resDlgNo" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="resDlgYes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="resMsgScannerBottom" xml:space="preserve">
+    <value>Kod zostanie rozpoznany automatycznie\nUżyj 'back' by anulować</value>
+  </data>
+  <data name="resMsgScannerTop" xml:space="preserve">
+    <value>Ustaw QRcode gniazdka w polu widzenia</value>
+  </data>
+  <data name="uiAutoOnOff.Label" xml:space="preserve">
+    <value>Automat</value>
+  </data>
+  <data name="uiBattAutoOnOff.Label" xml:space="preserve">
+    <value>Monitorowanie baterii</value>
+  </data>
+  <data name="uiMainPageCmdDevices.Label" xml:space="preserve">
+    <value>Gniazdka</value>
+  </data>
+  <data name="uiMainPageCreateLog.Label" xml:space="preserve">
+    <value>Twórz log</value>
+  </data>
+  <data name="uiMainPageGoExpl.Label" xml:space="preserve">
+    <value>Katalog z logami</value>
+  </data>
+  <data name="uiMainPageTitle.Text" xml:space="preserve">
+    <value>Gniazdka WEEDQB</value>
+  </data>
+  <data name="_lang" xml:space="preserve">
+    <value>pl</value>
+  </data>
+  <data name="uiHelpString1.Text" xml:space="preserve">
+    <value>Aplikacja służy do zarządzania smart gniazdkami WEEDQB, które są widoczne jako urządzenia Bluetooth o nazwie BT18. Istnieje aplikacja na Android, ale po co używać Android skoro można użyć Windows? :) Aplikacja nie jest "tłumaczeniem" wersji Android, ma trochę funkcjonalności których nie ma wersja Android (i może też nie mieć niektórych funkcjonalności wersji Android).</value>
+  </data>
+  <data name="uiHelpString2.Text" xml:space="preserve">
+    <value>Aplikacja nie korzysta z Internet - nigdzie nie wysła żadnych danych. Podobnie jak firmowa aplikacja, WEEDQB Button, nie wymaga zakładania żadnych kont, ani nic takiego.</value>
+  </data>
+  <data name="uiHelpString3.Text" xml:space="preserve">
+    <value>Zacznij od stworzenia listy gniazdek. Możesz tego dokonać na dwa sposoby: parując w Ustawieniach Windows gniazdko (PIN 1234) i uruchamiając aplikację, albo uruchamiając skanowanie sieci Bluetooth z poziomu aplikacji.</value>
+  </data>
+  <data name="uiHelpString4.Text" xml:space="preserve">
+    <value>Jeśli masz więcej niż jedno gniazdko, sugeruję dodawanie po jednym - podłącz gniazdko do sieci, dodaj (jak powyżej opisano), zmień mu nazwę, i dodawaj następne. To najprostszy sposób rozróżnienia gniazdek.</value>
+  </data>
+  <data name="uiHelpString5.Text" xml:space="preserve">
+    <value>Niestety, gniazdka nie umożliwiają odczytania ich bieżącego stanu.</value>
+  </data>
+  <data name="uiHelpString6.Text" xml:space="preserve">
+    <value>Aplikacja może tworzyć log (historię) włączania/wyłączania gniazdek. Na komputerze stacjonarnym, aby dostać się do tych logów, naciśnij button na dole strony aplikacji. Na telefonach, pliki są tworzone na karcie SD w katalogu Datalogs\WeedQbPlug, z podfolderami dla kolejnych lat.</value>
+  </data>
+  <data name="uiHelpString7.Text" xml:space="preserve">
+    <value>Jeśli uzywasz Windows na urządzeniu, które ma baterie (np. na telefonie), aplikacja może automatycznie włączać gniazdko (gdy poziom naładowania spadnie &lt; 30 %, lub gdy pozostało enegii mniej niż na 90 minut), i wyłączać (gdy naładowanie osiągnie 98 %). Kontrola stanu baterii odbywa się co 30 minut. Uwaga: aby aplikacja mogła sprawdzić stan baterii, nie może być aktywne Oszczędzanie Energii! Możesz wykorzystać moją inną aplikację, AccuMon, by stworzyć log rozładowywania urządzenia, i odpowiednio ustawić Oszczędzanie Energii.</value>
+  </data>
+  <data name="uiHelpString8.Text" xml:space="preserve">
+    <value>Wersja "europejska" tego gniazdka jest tylko do CEE 7/3.  W Polsce (i chyba Francji) obowiązują gniazdka CEE 7/5. Można jednak "przekonwertować" BT18: odkręć 3 śrubki, usuń blaszkę uziemienia, i powiększ (o ok. 2 mm, w stronę bolców) jedną z prostokątnych dziurek. Tak przerobione BT18  nie ma uziemienia, ale za to można włożyć do gniazdka w ścianie.</value>
+  </data>
+  <data name="msgCommandInClipEnd" xml:space="preserve">
+    <value>(komenda jest skopiowana do ClipBoard)</value>
+  </data>
+  <data name="msgCommandInClipHdr" xml:space="preserve">
+    <value>Z command line, użyj </value>
+  </data>
+  <data name="msgCommandInClipOr" xml:space="preserve">
+    <value>albo</value>
+  </data>
+  <data name="msgAnotherInstance" xml:space="preserve">
+    <value>Bluetooth jest używany przez inną instancję aplikacji</value>
+  </data>
+</root>

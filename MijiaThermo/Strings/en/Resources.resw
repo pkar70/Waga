@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msgCannotGetGATTvalue" xml:space="preserve">
+    <value>Cannot get GATT value</value>
+  </data>
+  <data name="msgCannotReach" xml:space="preserve">
+    <value>is inaccessible</value>
+  </data>
+  <data name="msgEnterNewName" xml:space="preserve">
+    <value>Enter new name</value>
+  </data>
+  <data name="msgEnterNewName1" xml:space="preserve">
+    <value>Enter new name, but without these three characters  \ : /</value>
+  </data>
+  <data name="msgFailNoBackground" xml:space="preserve">
+    <value>Cannot work in background - please add permission</value>
+  </data>
+  <data name="msgHistoryLogClip" xml:space="preserve">
+    <value>Log is in clipboard</value>
+  </data>
+  <data name="msgHistoryMailBodyHdr" xml:space="preserve">
+    <value>Log downloaded from device at</value>
+  </data>
+  <data name="msgHistoryStatDaty" xml:space="preserve">
+    <value>Between</value>
+  </data>
+  <data name="msgHistoryStatMaxH" xml:space="preserve">
+    <value>Maximum humidity:</value>
+  </data>
+  <data name="msgHistoryStatMaxT" xml:space="preserve">
+    <value>Maximum temperature:</value>
+  </data>
+  <data name="msgHistoryStatMinH" xml:space="preserve">
+    <value>Minimum humidity:</value>
+  </data>
+  <data name="msgHistoryStatMinT" xml:space="preserve">
+    <value>Minimum temperature:</value>
+  </data>
+  <data name="msgHistorySureClear" xml:space="preserve">
+    <value>Do you want to clear log within device?</value>
+  </data>
+  <data name="msgHistoryWantRead" xml:space="preserve">
+    <value>Download history from device?</value>
+  </data>
+  <data name="msgHmaxDeltaHmin" xml:space="preserve">
+    <value>too small difference between Hmax and Hmin</value>
+  </data>
+  <data name="msgHmaxGreaterHmin" xml:space="preserve">
+    <value>Hmax must be greater than Hmin</value>
+  </data>
+  <data name="msgNoDataFromDevice" xml:space="preserve">
+    <value>No data returned from device</value>
+  </data>
+  <data name="msgNoDeviceTryRescan" xml:space="preserve">
+    <value>Cannot reach device, try to rescan</value>
+  </data>
+  <data name="msgOnlyNumberFor" xml:space="preserve">
+    <value>Please, enter number for</value>
+  </data>
+  <data name="msgOnlyNumbersHere" xml:space="preserve">
+    <value>Please, enter number here...</value>
+  </data>
+  <data name="msgReadAllFromDevice" xml:space="preserve">
+    <value>Should I read data from device? It can take some time...</value>
+  </data>
+  <data name="msgRename" xml:space="preserve">
+    <value>Rename!</value>
+  </data>
+  <data name="msgScanBTnet" xml:space="preserve">
+    <value>Scan Bluetooth devices?</value>
+  </data>
+  <data name="msgSetClock" xml:space="preserve">
+    <value>Set device clock to desktop time?</value>
+  </data>
+  <data name="msgSwitchUnit" xml:space="preserve">
+    <value>Switch unit?</value>
+  </data>
+  <data name="msgTmaxDeltaTmin" xml:space="preserve">
+    <value>too small difference between Tmax and Tmin</value>
+  </data>
+  <data name="msgTmaxGreaterTmin" xml:space="preserve">
+    <value>Tmax must be greater than Tmin</value>
+  </data>
+  <data name="msgToastAppTemp" xml:space="preserve">
+    <value>Apparent temp</value>
+  </data>
+  <data name="msgToastBatt" xml:space="preserve">
+    <value>Battery low</value>
+  </data>
+  <data name="msgToastHigro" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="msgToastTemp" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="msgToastTooHigh" xml:space="preserve">
+    <value>too high</value>
+  </data>
+  <data name="msgToastTooLow" xml:space="preserve">
+    <value>too low</value>
+  </data>
+  <data name="msgValueTooLow" xml:space="preserve">
+    <value>too low</value>
+  </data>
+  <data name="msgWarnNoBT" xml:space="preserve">
+    <value>Warning: Bluetooth is disabled</value>
+  </data>
+  <data name="resDlgCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="resDlgContinue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="resDlgNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="resDlgYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="resMsgDeltaTooBig" xml:space="preserve">
+    <value>Too big delta...</value>
+  </data>
+  <data name="resUiAddedAt.Text" xml:space="preserve">
+    <value>Added at</value>
+  </data>
+  <data name="resUiCurrData.Text" xml:space="preserve">
+    <value>Current (uncorrected) data</value>
+  </data>
+  <data name="resUiCurrDataB.Text" xml:space="preserve">
+    <value>... battery</value>
+  </data>
+  <data name="resUiCurrDataH.Text" xml:space="preserve">
+    <value>... humidity</value>
+  </data>
+  <data name="resUiCurrDataT.Text" xml:space="preserve">
+    <value>Last temperature</value>
+  </data>
+  <data name="resUiDeltaHigrButton.Content" xml:space="preserve">
+    <value>Set!</value>
+  </data>
+  <data name="resUiDeltaTemp.Text" xml:space="preserve">
+    <value>Δ temperature</value>
+  </data>
+  <data name="resUiDeltaTempButton.Content" xml:space="preserve">
+    <value>Set!</value>
+  </data>
+  <data name="resUiDevTime.Text" xml:space="preserve">
+    <value>Device time</value>
+  </data>
+  <data name="resUiHourlyH.Text" xml:space="preserve">
+    <value>... humidity</value>
+  </data>
+  <data name="resUiHourlyHdr.Text" xml:space="preserve">
+    <value>Hourly range</value>
+  </data>
+  <data name="resUiHourlyT.Text" xml:space="preserve">
+    <value>... temperat</value>
+  </data>
+  <data name="resUiMacAddr.Text" xml:space="preserve">
+    <value>MAC address</value>
+  </data>
+  <data name="resUiMainPageTitle.Text" xml:space="preserve">
+    <value>Thermometers</value>
+  </data>
+  <data name="resUiMaxHigro.Text" xml:space="preserve">
+    <value>... max humidity</value>
+  </data>
+  <data name="resUiMaxTemp.Text" xml:space="preserve">
+    <value>... max temperat</value>
+  </data>
+  <data name="resUiMinHigro.Text" xml:space="preserve">
+    <value>... min humidity</value>
+  </data>
+  <data name="resUiMinTemp.Text" xml:space="preserve">
+    <value>... min temperat</value>
+  </data>
+  <data name="resUiUnitsHdr.Text" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="uiAlertAlarmHigh.Content" xml:space="preserve">
+    <value>Alarm high</value>
+  </data>
+  <data name="uiAlertAlarmLow.Content" xml:space="preserve">
+    <value>Alarm low</value>
+  </data>
+  <data name="uiAlertIncludeHigro.Content" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="uiAlertIncludeRange.Content" xml:space="preserve">
+    <value>Read hourly range</value>
+  </data>
+  <data name="uiAlertIncludeTApp.Content" xml:space="preserve">
+    <value>Apparent temperature</value>
+  </data>
+  <data name="uiAlertIncludeTemp.Content" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="uiAlertsOnOff.Content" xml:space="preserve">
+    <value>Check every</value>
+  </data>
+  <data name="uiAlertWarnHigh.Content" xml:space="preserve">
+    <value>Warning high</value>
+  </data>
+  <data name="uiAlertWarnLow.Content" xml:space="preserve">
+    <value>Warning low</value>
+  </data>
+  <data name="uiAppTemp.Label" xml:space="preserve">
+    <value>Apparent temp calculator</value>
+  </data>
+  <data name="uiCalcSliderH.Header" xml:space="preserve">
+    <value>Relative humidity</value>
+  </data>
+  <data name="uiCalcSliderT.Header" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="uiCalcTempOdcz.Text" xml:space="preserve">
+    <value>Apparent temperature</value>
+  </data>
+  <data name="uiCalcTitle.Text" xml:space="preserve">
+    <value>Calculator</value>
+  </data>
+  <data name="uiDeltaHigt.Text" xml:space="preserve">
+    <value>Δ humidity</value>
+  </data>
+  <data name="uiGoAlerts.Label" xml:space="preserve">
+    <value>Alerts...</value>
+  </data>
+  <data name="uiHappyFaceButton.Content" xml:space="preserve">
+    <value>Set!</value>
+  </data>
+  <data name="uiHappyFaceHdr.Text" xml:space="preserve">
+    <value>Happy face</value>
+  </data>
+  <data name="uiHelpString1.Text" xml:space="preserve">
+    <value>  This app can control Mijia Thermo/Higro meters, square version. Such devices are visible on Bluetooth network as LYWSD03MMC. There is Android app for this, but why use Android when you can use Windows? :) And this app has some features not present in official Android app (but, of course, also lacks some of functionalities).</value>
+  </data>
+  <data name="uiHelpString1a.Text" xml:space="preserve">
+    <value>  App doesn't use Internet - it doesn't send your data, it doesn't require you to create any account, etc. Your privacy is valuable, and I don't want to compromize it.</value>
+  </data>
+  <data name="uiHelpString2.Text" xml:space="preserve">
+    <value>  Your first step should be scanning Bluetooth devices. If you have more than one device, please switch them on one by one - switch device on, run scanning within app, rename device found. This is simple way to know which device is which.</value>
+  </data>
+  <data name="uiHelpString3.Text" xml:space="preserve">
+    <value>  Then, set clock on every device; probably you would also want to set "happy face" ranges.</value>
+  </data>
+  <data name="uiHelpString4.Text" xml:space="preserve">
+    <value>  Main functionality of this app is download data from app, and export it. Every measurement, and every hourly statistic downloaded from device, is saved in text file. On desktop, you can access this files clicking on "Explorer" button on MainPage. On phones, these files are created on your SD card, in folder Datalogs\MijiaThermo, subfolders for year and month.</value>
+  </data>
+  <data name="uiHelpString4a.Text" xml:space="preserve">
+    <value>  App can work in background, retrieving data every 15, 30 or 60 minutes. This data is then compared with warning and alarm levels, and if such level is crossed, app sends you notification (in form of Toast). As data is stored in Roaming form, one instance of app (e.g., on desktop) can retrieve data, and another instance (e.g., on phone or laptop) can show this data for you.</value>
+  </data>
+  <data name="uiHelpString5.Text" xml:space="preserve">
+    <value>  Log within device is long, it contains data for at least two months; so you can download it only from time to time.</value>
+  </data>
+  <data name="uiHelpString6.Text" xml:space="preserve">
+    <value>  If you want charts, please export data to e.g. Excel - use History page, read data, copy to clipboard; then in Excel - paste into worksheet. Or use log files, created by app.</value>
+  </data>
+  <data name="uiHelpString7.Text" xml:space="preserve">
+    <value>  This app greatly utilizes information from https://github.com/JsBergbau/MiTemperature2 .</value>
+  </data>
+  <data name="uiHistoryClear.Content" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="uiHistoryTitle.Text" xml:space="preserve">
+    <value>History of hourly range</value>
+  </data>
+  <data name="uiLogRokMiesiac.OffContent" xml:space="preserve">
+    <value>Log file monthly</value>
+  </data>
+  <data name="uiLogRokMiesiac.OnContent" xml:space="preserve">
+    <value>Log file yearly</value>
+  </data>
+  <data name="uiMainPageCmdDevices.Label" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="uiMainPageCmdExplorer.Label" xml:space="preserve">
+    <value>Explorer</value>
+  </data>
+  <data name="uiMainPageFlyoutDetails.Text" xml:space="preserve">
+    <value>Details...</value>
+  </data>
+  <data name="uiMainPageFlyoutHistory.Text" xml:space="preserve">
+    <value>History...</value>
+  </data>
+  <data name="uiMainPageFlyoutRename.Text" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="uiMainPageHourlyH.Text" xml:space="preserve">
+    <value>Hourly higro</value>
+  </data>
+  <data name="uiMainPageHourlyT.Text" xml:space="preserve">
+    <value>Hourly temp</value>
+  </data>
+  <data name="uiTimeButton.Content" xml:space="preserve">
+    <value>Set!</value>
+  </data>
+  <data name="uiUnitsButton.Content" xml:space="preserve">
+    <value>Switch!</value>
+  </data>
+  <data name="_lang" xml:space="preserve">
+    <value>EN</value>
+  </data>
+</root>

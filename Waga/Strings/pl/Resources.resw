@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msgEnterName" xml:space="preserve">
+    <value>Podaj imię osoby</value>
+  </data>
+  <data name="resDlgCancel" xml:space="preserve">
+    <value>Rezygnuję</value>
+  </data>
+  <data name="resDlgContinue" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="_lang" xml:space="preserve">
+    <value>PL</value>
+  </data>
+  <data name="uiWagiTitle.Text" xml:space="preserve">
+    <value>Wagi</value>
+  </data>
+  <data name="uiWagiInfo.Text" xml:space="preserve">
+    <value>Dodanie tutaj wagi jest potrzebne tylko wtedy, gdy chce się ustawić tarę (gdy waga przekłamuje) lub gdy dane bio-oporu są przez wagę zmyślane.</value>
+  </data>
+  <data name="uiWagiSlider.Header" xml:space="preserve">
+    <value>Tara</value>
+  </data>
+  <data name="uiWagiSave.Label" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="uiWagiAdd.Label" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="uiOsobyTitle.Text" xml:space="preserve">
+    <value>Osoby</value>
+  </data>
+  <data name="uiOsobyBirth.Header" xml:space="preserve">
+    <value>Urodziny (do wyliczania wody, itp.)</value>
+  </data>
+  <data name="uiOsobySex.Header" xml:space="preserve">
+    <value>Płeć</value>
+  </data>
+  <data name="uiOsobyWzrost.Header" xml:space="preserve">
+    <value>Wzrost (do wyliczania BMI, wody, itp.)</value>
+  </data>
+  <data name="uiOsobySave.Label" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="uiOsobyAdd.Label" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="msgWagiAddedAt" xml:space="preserve">
+    <value>Dodana @</value>
+  </data>
+  <data name="msgWagiTyp" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="msgWagiWejdz" xml:space="preserve">
+    <value>Wejdź na wagę i kliknij OK</value>
+  </data>
+  <data name="uiMainTitle.Text" xml:space="preserve">
+    <value>Waga</value>
+  </data>
+  <data name="uiMainRawWeight.Text" xml:space="preserve">
+    <value>Masa (bez korekty)</value>
+  </data>
+  <data name="uiMainOpor.Text" xml:space="preserve">
+    <value>Bio-opór</value>
+  </data>
+  <data name="uiMainPomiar.Text" xml:space="preserve">
+    <value>Pomiar</value>
+  </data>
+  <data name="uiMainBarMierz.Label" xml:space="preserve">
+    <value>Pomiar</value>
+  </data>
+  <data name="uiMainBarOsoby.Label" xml:space="preserve">
+    <value>Osoby</value>
+  </data>
+  <data name="uiMainBarWagi.Label" xml:space="preserve">
+    <value>Wagi</value>
+  </data>
+  <data name="uiMainBarInfo.Label" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="uiWagiIgnoreBio.OffContent" xml:space="preserve">
+    <value>Bio-opór jest fałszywy, ignoruj go</value>
+  </data>
+  <data name="uiWagiIgnoreBio.OnContent" xml:space="preserve">
+    <value>Użyj bio-oporu</value>
+  </data>
+  <data name="msgBtErrDisabled" xml:space="preserve">
+    <value>Masz wyłączony Bluetooth, włącz go i ponów próbę</value>
+  </data>
+  <data name="msgBtErrNotFound" xml:space="preserve">
+    <value>Błąd: wygląda na to, że nie masz Bluetooth</value>
+  </data>
+  <data name="msgBtWarnDisabled" xml:space="preserve">
+    <value>Uwaga: masz wyłączony Bluetooth, włącz go przed ważeniem</value>
+  </data>
+  <data name="msgParamFat" xml:space="preserve">
+    <value>Tkanka tłuszczowa</value>
+  </data>
+  <data name="msgParamVisce" xml:space="preserve">
+    <value>Tłuszcz trzewny</value>
+  </data>
+  <data name="msgParamWoda" xml:space="preserve">
+    <value>Woda</value>
+  </data>
+  <data name="msgWczytacRoaming" xml:space="preserve">
+    <value>Znalazłem pomiar zapisany na innym urządzeniu. Zaimportować?</value>
+  </data>
+  <data name="resDlgNo" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="resDlgYes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="msgSettNoSaveAtAll" xml:space="preserve">
+    <value>Żadne pomiary nie zostaną zapisane. Tak ma być?</value>
+  </data>
+  <data name="msgDataInClip" xml:space="preserve">
+    <value>Dane zostały wyeksportowane do ClipBoard.</value>
+  </data>
+  <data name="msgNoDataToExportEmpty" xml:space="preserve">
+    <value>Nie mam żadnego pomiaru zapisanego.</value>
+  </data>
+  <data name="msgNoDataToExportUser" xml:space="preserve">
+    <value>Dla tej osoby nie mam zapisanego żadnego pomiaru.</value>
+  </data>
+  <data name="uiOsobyExport.Text" xml:space="preserve">
+    <value>Eksport historii</value>
+  </data>
+  <data name="uiUseBio.OffContent" xml:space="preserve">
+    <value>Ignoruj bio-oporu</value>
+  </data>
+  <data name="uiUseBio.OnContent" xml:space="preserve">
+    <value>Użyj bio-oporu</value>
+  </data>
+  <data name="manifestAppName" xml:space="preserve">
+    <value>Waga</value>
+  </data>
+</root>

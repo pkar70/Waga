@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="Waga.Wagi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Waga"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <UserControl.Resources>
+        <local:KonwersjaMAC x:Key="KonwersjaMac"/>
+        <local:KonwersjaDaty x:Key="KonwersjaDaty"/>
+        <local:KonwersjaTypu x:Key="KonwersjaTypu"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="24" HorizontalAlignment="Center" x:Uid="uiWagiTitle" Text="Wagi" />
+        <TextBlock Margin="5,10,5,10" Grid.Row="1" Text="This is optional functionality - mainly for setting scale's tare" x:Uid="uiWagiInfo" TextWrapping="Wrap" />
+
+        <ListView Name="uiItems" Grid.Row="2" Margin="5,5,5,5"  >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,5,0,0" BorderThickness="2" BorderBrush="Blue">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Text="{Binding sName, Mode=TwoWay }" FontSize="20" Margin="5,2,5,0"/>
+                            <TextBlock Grid.Column="1" Text="{Binding uMAC, Mode=OneTime, Converter={StaticResource KonwersjaMac}}" Margin="5,2,5,0" VerticalAlignment="Bottom" />
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding sTimeAdded, Mode=OneTime, Converter={StaticResource KonwersjaDaty}}" Margin="5,2,5,0"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding iTypWagi, Mode=OneTime, Converter={StaticResource KonwersjaTypu}}" Margin="5,2,5,0" HorizontalAlignment="Right" />
+                            <Slider Name="uiSlider"  Grid.Row="1" Grid.Column="0" Header="Tara" Value="{Binding dTara, Mode=TwoWay }" Minimum="-5" Maximum="5" SmallChange="0.1" LargeChange="1" StepFrequency="0.1" VerticalAlignment="Center" Margin="5,10,5,0"  x:Uid="uiWagiSlider"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Value, ElementName=uiSlider, Mode=TwoWay }" Margin="5,2,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                            <ToggleSwitch Grid.Row="2" IsOn="{Binding bUseBio, Mode=TwoWay}" x:Uid="uiWagiIgnoreBio" OffContent="Bioimpedance is fake, ignore it" OnContent="Use bioimpedance" Margin="5,2,5,0" />
+                        </Grid>
+                    </Grid>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Accept" Label="Save"  x:Uid="uiWagiSave" Click="uiSave_Click"/>
+            <AppBarSeparator/>
+            <AppBarButton Icon="Add" Label="Add" x:Name="uiAddWaga"  x:Uid="uiWagiAdd" Click="uiAddWaga_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>

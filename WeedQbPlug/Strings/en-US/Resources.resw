@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="msgCommandInClipEnd" xml:space="preserve">
+    <value>(command is copied to ClipBoard)</value>
+  </data>
+  <data name="msgCommandInClipHdr" xml:space="preserve">
+    <value>From command line, use command</value>
+  </data>
+  <data name="msgCommandInClipOr" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="msgEnterNewName" xml:space="preserve">
+    <value>Enter new socket name</value>
+  </data>
+  <data name="msgFoundNew" xml:space="preserve">
+    <value>Found new paired socket</value>
+  </data>
+  <data name="msgNoQRCode" xml:space="preserve">
+    <value>This is not QRcode</value>
+  </data>
+  <data name="msgRename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="msgScanBTnet" xml:space="preserve">
+    <value>Scan Bluetooth devices?</value>
+  </data>
+  <data name="msgWantAccuTimer" xml:space="preserve">
+    <value>Do you want to automatically control socket to keep battery charged?</value>
+  </data>
+  <data name="msgWantImport" xml:space="preserve">
+    <value>Do you want to import paired devices list?</value>
+  </data>
+  <data name="resDlgCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="resDlgNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="resDlgYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="resMsgScannerBottom" xml:space="preserve">
+    <value>Camera will automatically scan QRcode\nPress the 'Back' button to Cancel</value>
+  </data>
+  <data name="resMsgScannerTop" xml:space="preserve">
+    <value>Hold camera up to socket's QRcode</value>
+  </data>
+  <data name="uiAutoOnOff.Label" xml:space="preserve">
+    <value>Battery automatic</value>
+  </data>
+  <data name="uiBattAutoOnOff.Label" xml:space="preserve">
+    <value>Battery monitor</value>
+  </data>
+  <data name="uiHelpString1.Text" xml:space="preserve">
+    <value>This app can control Bluetooth smart sockets named WEEDQB, visible on Bluetooth network as BT18. There is Android app for this, but why use Android when you can use Windows? :) And this app has some features not present in official Android app (but, of course, can also lacks some of functionalities).</value>
+  </data>
+  <data name="uiHelpString2.Text" xml:space="preserve">
+    <value>App doesn't use Internet - it doesn't send your data anywhere. Similar to original app, WEEDQB Button, it doesn't require you to create any account, etc.</value>
+  </data>
+  <data name="uiHelpString3.Text" xml:space="preserve">
+    <value>Your first step should be creating list of devices. It can be done in two different ways: by pairing device in Windows settings (PIN 1234) and running app; or by scanning Bluetooth network from app.</value>
+  </data>
+  <data name="uiHelpString4.Text" xml:space="preserve">
+    <value>If you have more than one device, please add them on one by one - switch device on, add it (as described above), rename device found. This is simple way to know which device is which.</value>
+  </data>
+  <data name="uiHelpString5.Text" xml:space="preserve">
+    <value>By nature of these sockets, app cannot read current status of device.</value>
+  </data>
+  <data name="uiHelpString6.Text" xml:space="preserve">
+    <value>App can create log of commands sent to socket (i.e. switching on or off). On desktop, you can access this files clicking on Explorer button on MainPage. On phones, these files are created on your SD card, in folder Datalogs\WeedQbPlug, subfolders for each year.</value>
+  </data>
+  <data name="uiHelpString7.Text" xml:space="preserve">
+    <value>If your Windows device has batteries (e.g., it is phone), app can automatically switch on power socket when battery level drops below 30 %, or remaining discharge time drops below 90 minuts, and switch off when it reaches 98 %. Battery level test is done every 30 minutes. Warning: to be able to check battery status, Power Saver cannot be active! You can use my other app, AccuMon, to create log of discharging history.</value>
+  </data>
+  <data name="uiHelpString8.Text" xml:space="preserve">
+    <value>Sockets described as "European" is only for CEE 7/3 socket. So, if you live in Poland, France, etc., and your sockets are European CEE 7/5, you can "convert" BT18: unscrew it, remove earth contact, and cut out two millimeters of plastic, making hole somewhat larger. But such socket doesn't have earth pin!</value>
+  </data>
+  <data name="uiMainPageCmdDevices.Label" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="uiMainPageCreateLog.Label" xml:space="preserve">
+    <value>Create Log</value>
+  </data>
+  <data name="uiMainPageGoExpl.Label" xml:space="preserve">
+    <value>Open explorer</value>
+  </data>
+  <data name="uiMainPageTitle.Text" xml:space="preserve">
+    <value>WEEDQB sockets</value>
+  </data>
+  <data name="_lang" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="msgAnotherInstance" xml:space="preserve">
+    <value>Another instance is using Bluetooth</value>
+  </data>
+</root>
