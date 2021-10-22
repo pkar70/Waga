@@ -20,14 +20,14 @@
  English: https://www.microsoft.com/en-us/p/u/9NJTGQKM77NQ  <br />
  Język polski: https://www.microsoft.com/pl-pl/p/u/9NJTGQKM77NQ
 
- Privacy policy: http://beskid.geo.uj.edu.pl/p/ms/waga-privacy.htm
+ Privacy policy: https://github.com/pkar70/Waga/wiki/Privacy-policy-(Weiging)
 
 # WeedQbPlug (WeedQb Socket)
 
  English: https://www.microsoft.com/en-us/p/u/9N8FBT2K8T24  <br />
  Język polski: https://www.microsoft.com/pl-pl/p/u/9N8FBT2K8T24
 
- Privacy policy: http://beskid.geo.uj.edu.pl/p/ms/weedqb-privacy.htm
+ Privacy policy: https://github.com/pkar70/Waga/wiki/Privacy-policy-(WEEDQB-socket)
 
 
  For history (in Polish), see MainPage.xaml.vb file in each of the apps.
